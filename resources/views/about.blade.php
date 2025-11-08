@@ -3,71 +3,206 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>About — SweetBite Bakery</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    .lead-para { max-width: 75ch; }
-    footer { background:#222; color:#fff; padding:1rem 0; margin-top:2rem; }
-  </style>
+  <title>SweetBite Bakery — About</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark custom-nav shadow-sm">
     <div class="container">
-      <a class="navbar-brand fw-bold" href="home.html">SweetBite Bakery</a>
-      <div class="collapse navbar-collapse" id="navMenu">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="order.html">Custom Order</a></li>
+      <a class="navbar-brand d-flex align-items-center" href="home.html">
+        <span class="logo-mark me-2">SB</span>
+        <span class="brand-text">
+          SweetBite <span class="fw-normal">Bakery</span>
+        </span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+          <li class="nav-item">
+            <a class="nav-link nav-hover" href="{{route('home.index')}}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-hover active" href="{{route('home.about')}}">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-hover" href="{{route('home.order')}}">Order</a>
+          </li>
+          <li class="nav-item ms-lg-2">
+            <a class="btn btn-light btn-sm rounded-pill nav-cta" href="order.html">
+              <i class="bi bi-bag-heart-fill me-1"></i> Order Now
+            </a>
+          </li>
+          <li class="nav-item ms-lg-2">
+            <a class="nav-link nav-hover small" href="admin.html">
+              <i class="bi bi-speedometer2 me-1"></i>Admin
+            </a>
+          </li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <main class="container py-5">
-    <h1>About SweetBite</h1>
-    <p class="lead lead-para">SweetBite is a family-run bakery serving our town since 2016. We specialize in custom cakes and desserts for birthdays, weddings, corporate events, and small celebrations. Our mission is to bring joy through beautifully-designed, delicious treats.</p>
+  <main>
+    <section class="py-5">
+      <div class="container">
+        <div class="row g-4 align-items-center">
+          <div class="col-lg-6">
+            <h1 class="mb-3 section-title">Our story</h1>
+            <p class="lead-para">
+              SweetBite Bakery started as a small home kitchen, baking simple birthday cakes and buns for family and neighbours. Word spread quickly, and soon weekends turned into steady orders for schools, offices and community events.
+            </p>
+            <p class="lead-para">
+              Today, we still keep the same heart: soft, fresh bakes made with care, fair prices and clear communication with our customers &mdash; whether you&apos;re buying a single loaf or a multi-tier wedding cake.
+            </p>
+          </div>
+          <div class="col-lg-6">
+            <div class="about-grid">
+              <div class="about-card">
+                <h3 class="h5 mb-1">Our mission</h3>
+                <p class="small text-muted mb-0">
+                  To make reliable, delicious baked goods that people can afford and trust for their everyday tables and special milestones.
+                </p>
+              </div>
+              <div class="about-card">
+                <h3 class="h5 mb-1">Our promise</h3>
+                <p class="small text-muted mb-0">
+                  We communicate clearly about pricing, design and pickup time, so there are no surprises on your big day.
+                </p>
+              </div>
+              <div class="about-card">
+                <h3 class="h5 mb-1">Our values</h3>
+                <ul class="small text-muted mb-0 ps-3">
+                  <li>Consistency in taste and quality</li>
+                  <li>Respect for customer budgets</li>
+                  <li>Honest timelines and feedback</li>
+                </ul>
+              </div>
+              <div class="about-card">
+                <h3 class="h5 mb-1">Community</h3>
+                <p class="small text-muted mb-0">
+                  We love providing bakes for school events, fundraisers and small businesses around us.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
 
-    <div class="row g-4 mt-4">
-      <div class="col-md-6">
-        <h3>Our Values</h3>
-        <ul>
-          <li>Quality first: only fresh, local ingredients.</li>
-          <li>Customer-focused: we collaborate on every custom order.</li>
-          <li>Community-minded: we support local suppliers and events.</li>
-        </ul>
+        <!-- Stats -->
+        <div class="row g-3 mt-5">
+          <div class="col-md-3 col-6">
+            <div class="stat-card">
+              <span class="stat-number">5+</span>
+              <span class="stat-label">years baking</span>
+            </div>
+          </div>
+          <div class="col-md-3 col-6">
+            <div class="stat-card">
+              <span class="stat-number">1000+</span>
+              <span class="stat-label">birthday cakes</span>
+            </div>
+          </div>
+          <div class="col-md-3 col-6">
+            <div class="stat-card">
+              <span class="stat-number">50+</span>
+              <span class="stat-label">weddings served</span>
+            </div>
+          </div>
+          <div class="col-md-3 col-6">
+            <div class="stat-card">
+              <span class="stat-number">4.8</span>
+              <span class="stat-label">average rating</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- How ordering works -->
+        <div class="row g-4 mt-5 align-items-start">
+          <div class="col-lg-5">
+            <h2 class="section-title mb-3">How ordering works</h2>
+            <p class="section-subtitle">
+              We keep the process straightforward so you can focus on planning your event.
+            </p>
+          </div>
+          <div class="col-lg-7">
+            <ol class="timeline">
+              <li>
+                <h3 class="h6 mb-1">1. Share the details</h3>
+                <p class="small text-muted mb-0">Tell us the date, type of event, number of people and your rough budget.</p>
+              </li>
+              <li>
+                <h3 class="h6 mb-1">2. Confirm design and price</h3>
+                <p class="small text-muted mb-0">We suggest flavour, size and design options. Once you pick one, we confirm the final quote.</p>
+              </li>
+              <li>
+                <h3 class="h6 mb-1">3. Deposit &amp; baking</h3>
+                <p class="small text-muted mb-0">For large cakes, we take a small deposit to lock the date. Then we start planning your bake.</p>
+              </li>
+              <li>
+                <h3 class="h6 mb-1">4. Pickup or delivery</h3>
+                <p class="small text-muted mb-0">You can pick up from the bakery or arrange delivery at a small extra cost (depending on location).</p>
+              </li>
+            </ol>
+          </div>
+        </div>
       </div>
-      <div class="col-md-6">
-        <h3>Contact</h3>
-        <p>Phone: +256 789137703<br>Email: visit@sweetbite.com</p>
-        <a class="btn btn-outline-primary" href="order.html">Place an Order</a>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-5 cta-section">
+      <div class="container">
+        <div class="cta-card">
+          <div>
+            <h2 class="mb-1">Ready to plan your cake?</h2>
+            <p class="mb-0 text-muted">
+              Use our order form to share your idea, and we will reply with suggestions and a clear quote.
+            </p>
+          </div>
+          <a href="order.html" class="btn btn-primary btn-lg rounded-pill">
+            Go to order form
+          </a>
+        </div>
       </div>
-    </div>
+    </section>
   </main>
 
-  <!-- <footer>
-  </footer> -->
-  <footer class="footer mt-5">
-  <div class="container py-4 text-center">
-    
-    <!-- Nav links -->
-    <div class="footer-links mb-2">
-      <a href="home.html" class="text-decoration-none text-white mx-1">Home</a>
-      <a href="about.html" class="text-decoration-none text-white mx-1">About</a>
-      <a href="order.html" class="text-decoration-none text-white mx-1">Order</a>
-      <!-- <a href="admin.html" class="text-decoration-none text-white mx-1">Admin</a> -->
+  <!-- Footer -->
+  <footer class="footer mt-auto">
+    <div class="container">
+      <div class="row align-items-center gy-3">
+        <div class="col-md-4 text-center text-md-start">
+          <div class="d-flex align-items-center justify-content-center justify-content-md-start gap-2">
+            <span class="logo-mark small">SB</span>
+            <span class="fw-semibold">SweetBite Bakery</span>
+          </div>
+          <p class="small text-light mt-2 mb-0">
+            Fresh bread, cakes and treats for everyday moments and special days.
+          </p>
+        </div>
+        <div class="col-md-4">
+          <div class="footer-links">
+            <a href="home.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="order.html">Order</a>
+          </div>
+        </div>
+        <div class="col-md-4 text-center text-md-end">
+          <p class="small mb-1">&copy; <span id="yearSpan"></span> SweetBite Bakery. All rights reserved.</p>
+          <p class="small mb-0">
+            <i class="bi bi-geo-alt-fill"></i> Kampala &bull; <i class="bi bi-telephone-fill"></i> +256 700 000000
+          </p>
+        </div>
+      </div>
     </div>
+  </footer>
 
-    <!-- Copyright -->
-    <p class="mb-1 text-white small">© 2025 SweetBite Bakery — All Rights Reserved</p>
-
-    <!-- Made with love (hidden on mobile) -->
-    <p class="mb-0 small text-white d-none d-sm-block">
-      Made with <span style="color:#ff6b81;">❤</span> by Yolamu Timothy.
-    </p>
-    
-  </div>
-</footer>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.getElementById('yearSpan').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>

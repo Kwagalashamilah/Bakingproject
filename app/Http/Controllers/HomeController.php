@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Order;
+use App\Models\Product;
+
 
 class HomeController extends Controller
 {
@@ -11,10 +14,34 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+     public function index()
     {
-        return view('home');
+        // Get featured/popular products for the home page
+        $popularProducts = Product::where('status', 'active')
+            ->orderBy('sort_order')
+            ->limit(3)
+            ->get();
+            
+        return view('home', compact('popularProducts'));
     }
+
+  public function about()
+    {
+        return view('about');
+    }
+      public function order()
+    {
+        return view('order');
+    }
+
+
+  public function admin()
+    {
+         $orders = Order::all();   // or Order::paginate(10);
+        return view('admin', compact('orders'));
+       
+    }
+
 
     /**
      * Show the form for creating a new resource.
