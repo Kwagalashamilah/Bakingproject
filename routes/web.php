@@ -14,18 +14,20 @@ Route::get('/index', [HomeController::class, 'index'])->name('home.index');
 Route::get('/about', [HomeController::class, 'about'])->name('home.about');
 Route::get('/order', [OrderController::class, 'index'])->name('home.order');
 
-// Feedback routes
+Route::delete('/orders/{order}', [OrderController::class, 'destroy'])->name('orders.destroy');
+
+
 Route::get('/feedback', [FeedbackControllerController::class, 'create'])->name('feedback.create');
 Route::post('/feedback', [FeedbackControllerController::class, 'store'])->name('feedback.store');
 
-// Admin routes - consolidated under prefix
+
 Route::prefix('admin')->group(function () {
-    // Main admin dashboard
+    
     Route::get('/', [ProductController::class, 'index'])->name('home.admin');
     
-    // Product management routes
+    
     Route::get('/products', [ProductController::class, 'index'])->name('products.index');
     Route::post('/products', [ProductController::class, 'store'])->name('products.store');
     Route::put('/products/{product}', [ProductController::class, 'update'])->name('products.update');
-    Route::delete('/products/{product}', [ProductController::class, 'destroy'])->name('products.destroy');
+    Route::delete('/delete/{id}', [ProductController::class, 'destroy'])->name('products.destroy');
 });

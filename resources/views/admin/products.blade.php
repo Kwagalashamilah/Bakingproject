@@ -57,7 +57,7 @@
   </style>
 </head>
 <body>
-  <!-- Navbar -->
+  
   <nav class="navbar navbar-expand-lg navbar-dark custom-nav shadow-sm">
     <div class="container">
       <a class="navbar-brand d-flex align-items-center" href="{{route('home.index')}}">
@@ -96,7 +96,7 @@
   </nav>
 
   <main class="admin-container">
-    <!-- Admin Header -->
+    
     <div class="admin-header">
       <div class="d-flex justify-content-between align-items-center">
         <div>
@@ -109,7 +109,7 @@
       </div>
     </div>
 
-    <!-- Products Table -->
+
     <div class="card shadow-sm">
       <div class="card-body">
         <div class="table-responsive">
@@ -178,7 +178,7 @@
     </div>
   </main>
 
-  <!-- Product Modal -->
+  
   <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
