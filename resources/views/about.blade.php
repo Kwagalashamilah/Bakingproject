@@ -21,24 +21,24 @@
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="mainNav">
+        <div class="collapse navbar-collapse" id="mainNav">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
           <li class="nav-item">
-            <a class="nav-link nav-hover" href="{{route('home.index')}}">Home</a>
+            <a class="nav-link nav-hover active" href="{{route('home.index')}}">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link nav-hover active" href="{{route('home.about')}}">About</a>
+            <a class="nav-link nav-hover" href="{{route('home.about')}}">About</a>
           </li>
           <li class="nav-item">
             <a class="nav-link nav-hover" href="{{route('home.order')}}">Order</a>
           </li>
           <li class="nav-item ms-lg-2">
-            <a class="btn btn-light btn-sm rounded-pill nav-cta" href="order.html">
+            <a class="btn btn-light btn-sm rounded-pill nav-cta" href="{{route('home.order')}}">
               <i class="bi bi-bag-heart-fill me-1"></i> Order Now
             </a>
           </li>
           <li class="nav-item ms-lg-2">
-            <a class="nav-link nav-hover small" href="admin.html">
+            <a class="nav-link nav-hover small" href="{{route('home.admin')}}">
               <i class="bi bi-speedometer2 me-1"></i>Admin
             </a>
           </li>
