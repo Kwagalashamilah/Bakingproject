@@ -271,9 +271,8 @@
     <div class="col-md-4">
         <div class="card product-card h-100">
             
-            
             @if($product->image)
-            <div class="dynamic-product-img" style="background-image: url('{{ asset('storage/app/public/' . $product->image) }}')"></div>
+            <div class="dynamic-product-img" style="background-image: url('{{ asset('storage/' . $product->image) }}')"></div>
             @else
             <div class="dynamic-product-img" style="background: linear-gradient(45deg, #f4a460, #d2691e); display: flex; align-items: center; justify-content: center; color: white;">
                 <i class="bi bi-image" style="font-size: 2rem;"></i>
